@@ -1,0 +1,18 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1786
+
+This is a preprocessor to Vim's search command.
+It converts a sequence of hex numbers into a usual search pattern
+(one char per hex-code).  Searching is literal.
+
+Example:
+    :HexSearch 56696d 20 72756c657a21
+finds ... you know.
+
+If 'fileformat' is unix or mac, there is (almost) no difference to searching
+for a hex string in a hex-editor.
+
+Here is the "almost" case for 'ff=unix':
+    :HexSearch 0A
+finds a linebreak at the end of the file, even if there isn't one.
+
+See inside script for more details.
